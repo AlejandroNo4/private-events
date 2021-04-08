@@ -26,6 +26,22 @@ class EventsController < ApplicationController
     redirect_to request.referrer || root_url
   end
 
+  def attend
+    @event = Event.find(params[:id])
+    
+    if @event.atendees.include?(current_user)
+      flash[:danger] = "You are already attending this event!"
+      redirect_to @event
+    elsif
+      @event.creator == current_user
+      flash[:danger] = "You are the creator of this event!"
+      redirect_to @event
+    else
+      @event.atendees << current_user
+      redirect_to @event
+    end
+  end
+
   private
 
   def event_params

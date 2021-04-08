@@ -15,7 +15,9 @@
       <p class="card-text">
         Created by: <%= event.creator.name %>
       </p>
-      <%= link_to 'See atendees', event_path(event.id) %>
+
+      <%= link_to 'See atendees', event_path(event.id), class:"btn btn-primary mb-2" %> <br/>
+      <%= link_to_attend(event.id) %>
     </div>
 <% end %>
 
