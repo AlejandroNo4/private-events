@@ -1,0 +1,9 @@
+<li class="list-group-item">
+  <span class="fw-bold"><%= event.title %></span><br/>
+  <span><%= event.description %></span><br/>
+  <span> Date: <%= event.date.strftime '%d-%m-%Y'  %>
+    <% if current_user%>
+      <%= link_to "delete", event, method: :delete, data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+</li>
