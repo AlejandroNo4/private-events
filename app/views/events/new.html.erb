@@ -1,0 +1,18 @@
+<h1 class='text-center'>Create a new event</h1>
+
+<div class= "bg-light p-3 mt-4">
+  <%= form_with(model: @event, local: true) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control mb-3' %>
+
+      <%= f.label :description %>
+      <%= f.text_area :description, placeholder: "What is your event about?", class: 'form-control mb-3' %>
+    
+      <%= f.label :date %>
+      <%= f.date_field :date %>
+
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
+</div>

@@ -1,0 +1,10 @@
+<h1><%= @user.name %></h1>
+    
+<div class="col-md-8">
+  <% if @user.created_events.any? %>
+    <h3 class="badge bg-primary rounded-pill"> created events (<%= @events.count %>)</h3>
+    <ol class="list-group">
+      <%= render @events %>
+    </ol>
+  <% end %>
+</div>
