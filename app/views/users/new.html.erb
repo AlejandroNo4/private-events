@@ -1,0 +1,13 @@
+<h1 class='text-center'>Create your account</h1>
+
+
+<div class= "bg-light p-3 mt-4">
+  <%= form_with(model: @user, local: true) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control mt-3' %>
+
+    <%= f.submit "Create my account", class: "btn btn-primary mt-3" %>
+  <% end %>
+</div>
