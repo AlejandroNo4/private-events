@@ -1,6 +1,10 @@
 class EventsController < ApplicationController
   before_action :correct_user, only: :destroy
 
+  def index
+    @events = Event.all
+  end
+
   def show
     @event = Event.find(params[:id])
   end
