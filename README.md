@@ -4,7 +4,7 @@
 
 > This project is part of the Microverse Rails curriculum.
 
-This project was made for learning proposes, to implement ActiveRecord’s associations using Ruby On Rails, so users can create events as well as assist to them.
+This project was made for learning proposes, to implement ActiveRecord’s associations using Ruby On Rails, so users can create events as well as assist them.
 
 ## Getting Started
 
@@ -50,41 +50,47 @@ If you want to play around with this project, follow these steps.
 
 > 1. Clone this repo into your computer
 
-- Click on "Code" and copy the HTTPS url
-- Go to your terminal, and type: 
+- Click on "Code" and copy the HTTPS URL
+- Go to your terminal and type: 
 
-      $ git clone (paste the url direction)
+      $ git clone (paste the URL direction)
 <br/>
 
 - Now, change the folder direction, type: 
 
       $ cd private-events
+<br/>
 
 > 2. Install Gems, run migration and the server on the terminal
 
 - You will need to have some gems that are already in the Gemfile. You just need to type and run:
 
       $ bundle install
+<br/>
 
 - Now to migrate:
 
       $ rails db:migrate
+<br/>
 
 - and finally, to run the server, type and enter:
 
       $ rails server
+<br/>
 
-- Open the browser and go to the url http://localhost:3000
+- Open the browser and go to the URL http://localhost:3000
 - This is the main page. Now you should be able to see the events that had been created.
+<br/>
 
-> 3. Create a user account and a event
+> 3. Create a user account and an event
 
 - Click on Sign Up
 - Now, just with your name create the account.
 - You will be redirected to your events page.
-- Go ahead, create your own event, click on New Event.
+- Go ahead, create your event, click on New Event.
+<br/>
 
-> 4. Assist to a event.
+> 4. Assist to an event.
 
 - All the events that users have created are listed on the main page. "All Events"
 - You can see who will attend the event by clicking on the button "See Attendees" or attend the event by clicking on the link "Attend Event!"
