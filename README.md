@@ -7,7 +7,7 @@
 This project was made for learning proposes, to implement ActiveRecord’s associations using Ruby On Rails, so users can create events as well as assist them.
 
 <p align="center">
-<img src="./app_screenshot.png" width="600"/>
+<img src="app_screenshot.png" width="600"/>
 </p>
 
 ## Getting Started
