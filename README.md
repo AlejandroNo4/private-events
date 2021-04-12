@@ -6,6 +6,10 @@
 
 This project was made for learning proposes, to implement ActiveRecord’s associations using Ruby On Rails, so users can create events as well as assist them.
 
+<p align="center">
+<img src="./app_screenshot.png" width="600"/>
+</p>
+
 ## Getting Started
 
 **Keep in mind that it is preferable to run this program with the most up-to-date version of Ruby.**
@@ -63,7 +67,13 @@ If you want to play around with this project, follow these steps.
 
 > 2. Install Gems, run migration and the server on the terminal
 
-- You will need to have some gems that are already in the Gemfile. You just need to type and run:
+- You will need to have some gems that are already in the Gemfile.
+- In the Gemfile add 
+
+      gem 'webpacker', '~> 6.x'
+<br/>
+
+- Now in the terminal type and run:
 
       $ bundle install
 <br/>
@@ -81,16 +91,24 @@ If you want to play around with this project, follow these steps.
 - Open the browser and go to the URL http://localhost:3000
 - This is the main page. Now you should be able to see the events that had been created.
 <br/>
+<br/>
 
 > 3. Create a user account and an event
 
 - Click on Sign Up
 - Now, just with your name create the account.
 - You will be redirected to your events page.
-- Go ahead, create your event, click on New Event.
+<br/>
 <br/>
 
-> 4. Assist to an event.
+> 4. Create an event.
+
+- To create your event, click on New Event and fill out the form.
+- Now this will redirect you to your events page, which will show your created, future and past events.
+<br/>
+<br/>
+
+> 5. Assist to an event.
 
 - All the events that users have created are listed on the main page. "All Events"
 - You can see who will attend the event by clicking on the button "See Attendees" or attend the event by clicking on the link "Attend Event!"
