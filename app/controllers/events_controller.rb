@@ -1,6 +1,5 @@
 class EventsController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy]
-  before_action :correct_user, only: :destroy 
+  before_action :correct_user, only: :destroy
 
   def show
     @event = Event.find(params[:id])
@@ -13,7 +12,7 @@ class EventsController < ApplicationController
   def create
     @event = current_user.created_events.build(event_params)
     if @event.save
-      flash[:success] = "event created!"
+      flash[:success] = 'event created!'
       redirect_to user_path(current_user.id)
     else
       render 'new'
@@ -22,24 +21,21 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy
-    flash[:success] = "Event deleted"
+    flash[:success] = 'Event deleted'
     redirect_to request.referrer || root_url
   end
 
   def attend
     @event = Event.find(params[:id])
-    
+
     if @event.atendees.include?(current_user)
-      flash[:danger] = "You are already attending this event!"
-      redirect_to @event
-    elsif
-      @event.creator == current_user
-      flash[:danger] = "You are the creator of this event!"
-      redirect_to @event
+      flash[:danger] = 'You are already attending this event!'
+    elsif @event.creator == current_user
+      flash[:danger] = 'You are the creator of this event!'
     else
       @event.atendees << current_user
-      redirect_to @event
     end
+    redirect_to @event
   end
 
   private

@@ -1,65 +1,118 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Basic Forms Rails
 
-> One paragraph statement about the project.
+> This project is part of the Microverse Rails curriculum.
 
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
-
-## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
+This project was made for learning proposes, to implement ActiveRecord’s associations using Ruby On Rails, so users can create events as well as assist to them.
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+**Keep in mind that it is preferable to run this program with the most up-to-date version of Ruby.**
 
-
-To get a local copy up and running follow these simple example steps.
+If you want to play around with this project, follow these steps.
 
 ### Prerequisites
 
-### Setup
+- Basic knowledge of the terminal of your computer
+- Basic knowledge of git
+- Ruby 2.6.0 or later version
+- Github account
+- Rails pre-installed
 
-### Install
+**If you don't have plenty of knowledge of one of these, here are some helpful links that can explain to you how to get and/or use them.**
 
-### Usage
+**Terminal**
+[- Basic guide](https://www.techrepublic.com/article/16-terminal-commands-every-user-should-know/)
+<br>
 
-### Run tests
+**Git**
+[- Basic guide](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
+<br>
 
-### Deployment
+**Ruby**
+[- Installation](https://www.ruby-lang.org/en/documentation/installation)
+[- Quickstart](https://www.ruby-lang.org/en/documentation/quickstart/)
+<br>
 
+**Github**
+[- Basic guide](https://guides.github.com/activities/hello-world/)
+<br>
 
+**Rails**
+[- A playlist of videos that shows you how to install and use it](https://www.youtube.com/watch?v=iF8caVyDi5g&list=PLCC34OHNcOtrk3BDsfZwf4GattdLoKCOF)
+<br>
+<br>
 
-## Authors
+### Setup and usage
 
-👤 **Author1**
+<br/>
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+> 1. Clone this repo into your computer
 
-👤 **Author2**
+- Click on "Code" and copy the HTTPS url
+- Go to your terminal, and type: 
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+      $ git clone (paste the url direction)
+<br/>
+
+- Now, change the folder direction, type: 
+
+      $ cd private-events
+
+> 2. Install Gems, run migration and the server on the terminal
+
+- You will need to have some gems that are already in the Gemfile. You just need to type and run:
+
+      $ bundle install
+
+- Now to migrate:
+
+      $ rails db:migrate
+
+- and finally, to run the server, type and enter:
+
+      $ rails server
+
+- Open the browser and go to the url http://localhost:3000
+- This is the main page. Now you should be able to see the events that had been created.
+
+> 3. Create a user account and a event
+
+- Click on Sign Up
+- Now, just with your name create the account.
+- You will be redirected to your events page.
+- Go ahead, create your own event, click on New Event.
+
+> 4. Assist to a event.
+
+- All the events that users have created are listed on the main page. "All Events"
+- You can see who will attend the event by clicking on the button "See Attendees" or attend the event by clicking on the link "Attend Event!"
+<br/>
+<br/>
+
+## Built With
+
+- Ruby 3.0.0
+- Rails 6.1.3
+- VsCode
+- Github
+- Git
+  <br>
+
+## Author
+
+👤 **Alejandro Guadalupe Contreras Rodriguez**
+
+- GitHub: [@AlejandroNo4](https://github.com/AlejandroNo4)
+- Twitter: [@Alejand80002666](https://twitter.com/alejand80002666)
+- LinkedIn: [Alejandro Contreras Rodriguez](https://www.linkedin.com/in/alejandro-contreras-rodriguez-b524821b5/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/AlejandroNo4/private-events/issues).
 
 ## Show your support
 
@@ -67,10 +120,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+Information based on:
 
-## 📝 License
+[- The Odin Project](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/associations)
 
-This project is [MIT](./MIT.md) licensed.
+For a better understanding, I followed this simple tutorial from Colleen Schnettler.
+
+[- has many through relationship in Rails](https://www.youtube.com/watch?v=15bbxWGTp6c&t=391s)

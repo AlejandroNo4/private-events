@@ -1,16 +1,15 @@
 class SessionsController < ApplicationController
-  def new
-  end
+  def new; end
 
   def create
     user = User.find_by(name: params[:session][:name])
     if user
       log_in user
-      flash[:success] = "Signed in successfully!"
+      flash[:success] = 'Signed in successfully!'
       redirect_to user
     else
-      flash.now[:danger] = "Invalid name"
-      render "new"
+      flash.now[:danger] = 'Invalid name'
+      render 'new'
     end
   end
 
