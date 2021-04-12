@@ -1,0 +1,44 @@
+<h1><%= @user.name %></h1>
+    
+<div class="col-md-8">
+  <h3 class="badge bg-primary rounded-pill"> Created Events (<%= @events.count %>)</h3>
+  <div class='list-group border border-primary'>
+    <% @user.created_events.each do |event| %>
+      <li class='list-group-item '>
+        <span class="fw-bold"><%= event.title %></span><br/>
+        <span><%= event.description %></span><br/>
+        <span> Date: <%= event.date.strftime '%d-%m-%Y'  %>
+          <%= link_to "delete", event, method: :delete, data: { confirm: "You sure?" } %>
+        </span>
+      </li>      
+    <% end %>
+  </div>
+</div>
+
+<div class="col-md-8 mt-4">
+  <h3 class="badge bg-primary rounded-pill bg-info text-dark"> Upcoming Events (<%= @user.attended_events.upcoming.count %>)</h3>
+  <div class='list-group border border-info'>
+    <% @user.attended_events.upcoming.each do |event| %>
+      <li class='list-group-item'>
+        <span class="fw-bold"><%= event.title %></span><br/>
+        <span><%= event.description %></span><br/>
+        <span> Date: <%= event.date.strftime '%d-%m-%Y'  %>
+        </span>
+      </li>      
+    <% end %>
+  </div>
+</div>
+
+<div class="col-md-8 mt-4">
+  <h3 class="badge bg-primary rounded-pill bg-danger"> Past Events (<%= @user.attended_events.past.count %>)</h3>
+  <div class='list-group border border-danger'>
+    <% @user.attended_events.past.each do |event| %>
+      <li class='list-group-item'>
+        <span class="fw-bold"><%= event.title %></span><br/>
+        <span><%= event.description %></span><br/>
+        <span> Date: <%= event.date.strftime '%d-%m-%Y'  %>
+        </span>
+      </li>      
+    <% end %>
+  </div>
+</div>
