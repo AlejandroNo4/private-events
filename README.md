@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Basic Forms Rails
+# Private Events
 
 > This project is part of the Microverse Rails curriculum.
 
